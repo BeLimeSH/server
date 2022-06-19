@@ -1,0 +1,5 @@
+package edu.kh.community.member.model.controller;
+
+public class SelectOneServlet {
+
+}

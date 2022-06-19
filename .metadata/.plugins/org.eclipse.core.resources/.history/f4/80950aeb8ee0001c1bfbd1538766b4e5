@@ -1,0 +1,19 @@
+package edu.kh.community.common;
+
+import java.io.File;
+
+import com.oreilly.servlet.multipart.FileRenamePolicy;
+
+//파일명 변경 정책
+public class MyRenamePolicy implements FileRenamePolicy {
+
+	@Override
+	public File rename(File originalFile) {
+		
+		
+		
+	}
+	
+	
+
+}

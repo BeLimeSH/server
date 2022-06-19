@@ -1,0 +1,11 @@
+package edu.kh.community.member.model.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/member/emailDupCheck")
+public class EmailDupCheckServlet extends HttpServlet{
+	
+	//이메일 중복 검사(비동기 통신)
+	
+}

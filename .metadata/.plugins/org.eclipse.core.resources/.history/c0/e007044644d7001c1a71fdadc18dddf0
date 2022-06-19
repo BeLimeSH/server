@@ -1,0 +1,23 @@
+package edu.kh.community.member.model.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/member/emailDupCheck")
+public class EmailDupCheckServlet extends HttpServlet{
+	
+	//이메일 중복 검사(비동기 통신)
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//비동기 통신으로 전달된 파라미터(data 속성의 key값) 얻어오기
+		String memberEmail = req.getParameter("memberEmail");
+		
+		System.out.println(memberEmail);
+	}
+}

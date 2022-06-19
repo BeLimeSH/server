@@ -1,0 +1,48 @@
+package edu.kh.test.user.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import edu.kh.test.user.model.service.UserService;
+import edu.kh.test.user.vo.User;
+
+@WebServlet("/Test1")
+public class SelectUserServlet extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		req.setCharacterEncoding("UTF-8"); //문자 인코딩 처리
+		
+		int userNo = Integer.parseInt( req.getParameter("userNo") );
+		
+		UserService service = new UserService();
+		User user = new User();
+		
+		
+		try {
+			user = service.selectUser(userNo);
+			
+			if(user != null) {
+				// 조회 결과가 있을 때 /views/searchSuccess.jsp로 결과 위임
+				
+				
+			} else {
+				// 조회 결과가 없을 때 /views/searchFail.jsp로 결과 위임
+				
+				
+				
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

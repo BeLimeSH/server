@@ -1,0 +1,31 @@
+package edu.kh.community.common.filter;
+
+import java.io.IOException;
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpFilter;
+
+@WebFilter("/LoginFilter")
+public class LoginFilter extends HttpFilter implements Filter {
+      
+	public void init(FilterConfig fConfig) throws ServletException {
+		System.out.println("로그인 필터 생성");
+	}
+	
+	public void destroy() {
+		System.out.println("로그인 필터가 변경되어 파괴 -> 이후 재생성");
+	}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		// 클라이언트 요청 시 로그인 여부를 확인
+		// -> 로그인 되어있지 않으면 메인페이지로 리다이렉트
+		
+		chain.doFilter(request, response);
+	}
+}

@@ -1,0 +1,17 @@
+package edu.kh.community.common;
+
+import java.io.File;
+
+import com.oreilly.servlet.multipart.FileRenamePolicy;
+
+public class MyRenamePolicy implements FileRenamePolicy {
+
+	@Override
+	public File rename(File arg0) {
+		
+		return null;
+	}
+	
+	
+
+}

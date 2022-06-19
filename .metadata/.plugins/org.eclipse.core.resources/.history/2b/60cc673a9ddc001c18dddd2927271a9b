@@ -1,0 +1,9 @@
+package edu.kh.community.board.model.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/board/detail")
+public class BoardDtailServlet extends HttpServlet {
+
+}

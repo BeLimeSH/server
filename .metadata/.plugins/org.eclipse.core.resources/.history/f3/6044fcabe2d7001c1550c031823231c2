@@ -1,0 +1,23 @@
+package edu.kh.community.member.model.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/member/selectOne")
+public class SelectOneServlet extends HttpServlet{
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//파라미터 얻어오기
+		String memberEmail = req.getParameter("memberEmail");
+		
+		System.out.println(memberEmail);
+	}
+
+}

@@ -1,0 +1,9 @@
+package edu.kh.test.user.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/Test1")
+public class SelectUserServlet extends HttpServlet {
+
+}

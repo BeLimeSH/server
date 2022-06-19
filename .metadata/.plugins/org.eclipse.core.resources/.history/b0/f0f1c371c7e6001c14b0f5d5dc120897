@@ -1,0 +1,5 @@
+package edu.kh.community.board.model.controller;
+
+public class BoardDeleteServlet {
+
+}

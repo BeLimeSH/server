@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<publish-info>
+  <server id="Tomcat v9.0 Server at localhost" path="publish4.dat"/>
+  <server id="community server" path="publish3.dat"/>
+  <server id="JSP Server" path="publish1.dat"/>
+  <server id="test server" path="publish5.dat"/>
+  <server id="Servlet Server" path="publish0.dat"/>
+</publish-info>

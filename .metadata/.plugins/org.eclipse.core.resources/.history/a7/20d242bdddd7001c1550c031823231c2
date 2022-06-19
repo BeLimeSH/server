@@ -1,0 +1,9 @@
+package edu.kh.community.member.model.controller;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/member/selectOne")
+public class SelectOneServlet extends HttpServlet{
+
+}

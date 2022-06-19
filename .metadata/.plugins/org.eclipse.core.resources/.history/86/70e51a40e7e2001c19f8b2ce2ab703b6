@@ -1,0 +1,7 @@
+package edu.kh.test.user.model.service;
+
+import static edu.kh.test.common.JDBCTemplate.*;
+
+public class UserService {
+
+}

@@ -1,0 +1,38 @@
+package edu.kh.community.member.model.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/member/myPage/profile")
+public class MyPageProfileServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//메인페이지 -> 프로필 이미지 클릭
+		//마이페이지 -> 프로필 클릭
+		
+		String path = "/WEB-INF/views/member/myPage-profile.jsp";
+		
+		req.getRequestDispatcher(path).forward(req, resp);
+		
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//프로필 이미지 업로드 -> 변경
+//		System.out.println( req.getParameter("profileImage") ); //null
+		
+		//파라미터가 얻어와지지 않는 이유
+		//1. enctype="multipart/form-data" -> 인코딩이 안 되어있어 파라미터가 인지되지 않음.
+		//2. input type="file" -> 파일형태 데이터
+		
+		// --> multipart/form-data 형식의 요청을 처리할 수 있는 전용 Request 객체가 필요
+		
+		
+	}
+}
